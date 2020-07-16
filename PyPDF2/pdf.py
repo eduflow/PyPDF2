@@ -1722,6 +1722,7 @@ class PdfFileReader(object):
         idnum = readUntilWhitespace(stream)
         extra |= utils.skipOverWhitespace(stream); stream.seek(-1, 1)
         generation = readUntilWhitespace(stream)
+        extra |= utils.skipOverWhitespace(stream); stream.seek(-1, 1)
         obj = stream.read(3)
         readNonWhitespace(stream)
         stream.seek(-1, 1)
